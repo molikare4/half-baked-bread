@@ -11,10 +11,8 @@ radio.onReceivedNumber(function (receivedNumber) {
         liten_fart = 5
     } else if (receivedNumber == 5) {
     	
-    } else if (false) {
-    	
-    } else {
-    	
+    } else if (receivedNumber == 6) {
+        wooweeewooweee = 1
     }
 })
 input.onButtonPressed(Button.A, function () {
@@ -37,7 +35,13 @@ basic.forever(function () {
             bitbot.move(BBMotor.Left, BBDirection.Forward, stor_fart)
             bitbot.move(BBMotor.Right, BBDirection.Forward, liten_fart)
         } else if (bitbot.readLine(BBLineSensor.Right) == 1 && bitbot.readLine(BBLineSensor.Left) == 1) {
-        	
+            let pærtstopp = 0
+            if (pærtstopp == 0) {
+                bitbot.stop(BBStopMode.Coast)
+                music.play(music.stringPlayable("C C C C - - - - ", 120), music.PlaybackMode.UntilDone)
+            } else if (pærtstopp == 1) {
+            	
+            }
         }
     } else if (wooweeewooweee == 1) {
     	
